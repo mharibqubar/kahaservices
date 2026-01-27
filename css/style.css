@@ -70,3 +70,71 @@ footer {
 .logo img {
   height: 45px;
 }
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 50px;
+}
+
+.contact-info {
+  background: #f1f5f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-info h2 {
+  color: #1e3a8a;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 15px;
+  background: #25d366;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ddd;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
