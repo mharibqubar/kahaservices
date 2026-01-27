@@ -1,32 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About | KAHA Services</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>About Us | KAHA Services Pvt Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --primary: #0a3cff;
+      --secondary: #ff8c00;
+      --dark: #111;
+      --light: #f6f8fb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: white;
+      padding: 16px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a3cff, #001a8d);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 18px;
+      padding: 40px 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .about-card h3 {
+      color: var(--primary);
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .about-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .value-box {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .value-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .value-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: #0f0f0f;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .cta h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      opacity: 0.85;
+    }
+
+    .cta button {
+      background: var(--secondary);
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #e67600;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>About KAHA Services</h1>
+ <header class="navbar">
+  <div class="logo">
+    <img src="assets/images/kaha.png" alt="KAHA Logo">
+    <span>KAHA Services Pvt Ltd</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<section class="content">
-  <p>
-    KAHA Services Private Limited is a multi-domain company providing
-    event studio booking, creative media services, staffing solutions,
-    and SaaS products.
-  </p>
+<section class="hero">
+  <h2>About KAHA Services</h2>
+  <p>Empowering businesses and individuals with creative, technical, and digital solutions.</p>
+</section>
 
-  <h3>Our Vision</h3>
-  <p>To simplify services through technology and creativity.</p>
+<section class="container">
 
-  <h3>Our Mission</h3>
-  <p>Deliver reliable, scalable and innovative solutions.</p>
+  <div class="about-section">
+    <div class="about-card">
+      <h3>Who We Are</h3>
+      <p>
+        KAHA Services Private Limited is a multi-domain solutions company delivering professional
+        studio services, media design, staffing solutions, and SaaS products. We bridge creativity
+        and technology to help our clients grow and stand out.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>What We Do</h3>
+      <p>
+        We connect clients with verified studios for events, provide high-quality photo and video
+        designs, offer skilled staffing solutions, and build scalable SaaS platforms tailored to
+        modern business needs.
+      </p>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="about-card">
+      <h3>Our Vision</h3>
+      <p>
+        To become a trusted global platform that simplifies creative services, staffing, and
+        software solutions through innovation and technology.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Mission</h3>
+      <p>
+        To deliver reliable, scalable, and high-quality solutions that empower clients to focus
+        on what matters most — growth and impact.
+      </p>
+    </div>
+  </div>
+
+  <h3 style="text-align:center;color:#0a3cff;margin-bottom:30px;">Our Core Values</h3>
+  <div class="values">
+    <div class="value-box">
+      <h4>Integrity</h4>
+      <p>We operate with honesty, transparency, and trust.</p>
+    </div>
+    <div class="value-box">
+      <h4>Innovation</h4>
+      <p>We embrace creativity and technology to solve real problems.</p>
+    </div>
+    <div class="value-box">
+      <h4>Quality</h4>
+      <p>We are committed to delivering excellence in everything we do.</p>
+    </div>
+    <div class="value-box">
+      <h4>Customer First</h4>
+      <p>Our clients’ success is our highest priority.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="cta">
+  <h3>Ready to Work With Us?</h3>
+  <p>Let’s build something impactful together.</p>
+  <button onclick="contactUs()">Contact Us</button>
 </section>
 
 <footer>
-  <a href="index.html">Back to Home</a>
+  © 2026 KAHA Services Private Limited. All rights reserved.
 </footer>
+
+<script>
+  function contactUs() {
+    window.location.href = "contact.html";
+  }
+</script>
 
 </body>
 </html>
