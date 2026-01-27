@@ -1,23 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Studio Booking | KAHA</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studios | KAHA Services Pvt Ltd</title>
+
+  <style>
+    :root {
+      --primary: #0a3cff;
+      --secondary: #ff8c00;
+      --dark: #1a1a1a;
+      --light: #f9f9f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0a3cff, #0023a3);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .studios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .studio-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .studio-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .studio-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .studio-content {
+      padding: 25px;
+    }
+
+    .studio-content h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .studio-content p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .studio-content button {
+      background: var(--secondary);
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 14px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .studio-content button:hover {
+      background: #e67600;
+    }
+
+    footer {
+      background: #0f0f0f;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
 
-<header><h1>Studio Booking</h1></header>
+  <header>
+    <h1>KAHA</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="studios.html">Studios</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="content">
-  <p>Find studios for weddings, events, photoshoots and corporate functions.</p>
-  <ul>
-    <li>Wedding Studios</li>
-    <li>Event Studios</li>
-    <li>Outdoor Shoot Locations</li>
-  </ul>
-</section>
+  <section class="hero">
+    <h2>Find the Perfect Studio for Your Event</h2>
+    <p>Photography • Videography • Wedding • Corporate Events</p>
+  </section>
 
-<footer><a href="services.html">Back</a></footer>
+  <section class="container">
+    <div class="studios-grid">
+
+      <div class="studio-card">
+        <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa" alt="Photography Studio">
+        <div class="studio-content">
+          <h3>Photography Studio</h3>
+          <p>Professional photo studios with advanced lighting, backdrops, and expert photographers.</p>
+          <button onclick="bookStudio('Photography Studio')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d" alt="Videography Studio">
+        <div class="studio-content">
+          <h3>Videography Studio</h3>
+          <p>High-end video production studios for ads, reels, films, and digital content.</p>
+          <button onclick="bookStudio('Videography Studio')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Wedding Studio">
+        <div class="studio-content">
+          <h3>Wedding Studio</h3>
+          <p>Complete wedding coverage including pre-wedding, drone shoots, and albums.</p>
+          <button onclick="bookStudio('Wedding Studio')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Corporate Studio">
+        <div class="studio-content">
+          <h3>Corporate Studio</h3>
+          <p>Professional studios for corporate events, interviews, branding, and promotions.</p>
+          <button onclick="bookStudio('Corporate Studio')">Book Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 KAHA Services Private Limited. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function bookStudio(studioName) {
+      alert("Thank you for choosing " + studioName + ". Our team will contact you shortly!");
+    }
+  </script>
 
 </body>
 </html>
