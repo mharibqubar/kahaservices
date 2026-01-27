@@ -1,23 +1,274 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Media Design | KAHA</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Media Design | KAHA Services Pvt Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --primary: #0a3cff;
+      --secondary: #ff8c00;
+      --dark: #121212;
+      --light: #f7f9fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: #ffffff;
+      padding: 16px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a3cff, #001f8d);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 34px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .media-card {
+      background: white;
+      border-radius: 18px;
+      padding: 35px 25px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .media-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+    }
+
+    .media-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+    }
+
+    .media-card h4 {
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .media-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .media-card button {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .media-card button:hover {
+      background: #e67600;
+    }
+
+    .cta {
+      background: #0f0f0f;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .cta h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      opacity: 0.85;
+    }
+
+    .cta button {
+      background: var(--secondary);
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #e67600;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
 
-<header><h1>Photo & Video Design</h1></header>
+<header>
+  <h1>KAHA</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="studios.html">Studios</a>
+    <a href="media-design.html">Media Design</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-<section class="content">
-  <ul>
-    <li>Photo Editing</li>
-    <li>Video Editing</li>
-    <li>Album Designing</li>
-    <li>Promotional Reels</li>
-  </ul>
+<section class="hero">
+  <h2>Creative Media Design Solutions</h2>
+  <p>High-impact photo, video, branding, and digital designs that elevate your brand presence.</p>
 </section>
 
-<footer><a href="services.html">Back</a></footer>
+<section class="container">
+  <div class="section-title">
+    <h3>Our Media Design Services</h3>
+    <p>From concept to creation, we design visuals that convert.</p>
+  </div>
+
+  <div class="media-grid">
+
+    <div class="media-card">
+      <h4>Photo Design & Retouching</h4>
+      <p>Professional photo editing, retouching, color correction, and creative compositions for all needs.</p>
+      <button onclick="enquire('Photo Design')">Enquire Now</button>
+    </div>
+
+    <div class="media-card">
+      <h4>Video Editing & Production</h4>
+      <p>Corporate videos, wedding films, reels, promos, color grading, and cinematic storytelling.</p>
+      <button onclick="enquire('Video Editing')">Enquire Now</button>
+    </div>
+
+    <div class="media-card">
+      <h4>Branding & Identity Design</h4>
+      <p>Logo design, brand guidelines, posters, banners, brochures, and corporate identity systems.</p>
+      <button onclick="enquire('Branding')">Enquire Now</button>
+    </div>
+
+    <div class="media-card">
+      <h4>Motion Graphics & Animation</h4>
+      <p>2D/3D motion graphics, explainer videos, animated ads, and visual storytelling.</p>
+      <button onclick="enquire('Motion Graphics')">Enquire Now</button>
+    </div>
+
+    <div class="media-card">
+      <h4>Social Media Creatives</h4>
+      <p>Instagram posts, reels, YouTube thumbnails, ads creatives designed to boost engagement.</p>
+      <button onclick="enquire('Social Media Design')">Enquire Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h3>Let’s Design Something Amazing</h3>
+  <p>Tell us your idea — our creative team will bring it to life.</p>
+  <button onclick="contactUs()">Contact Us</button>
+</section>
+
+<footer>
+  © 2026 KAHA Services Private Limited. All rights reserved.
+</footer>
+
+<script>
+  function enquire(service) {
+    alert("Thank you for your interest in " + service + ". Our team will contact you soon!");
+  }
+
+  function contactUs() {
+    window.location.href = "contact.html";
+  }
+</script>
 
 </body>
 </html>
